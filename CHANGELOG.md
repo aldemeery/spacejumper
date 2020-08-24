@@ -14,3 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Background and images.
 - Stars and bombs bouncing.
 - Score counter.
+- Restart the game after game over.

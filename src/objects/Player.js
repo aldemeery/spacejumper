@@ -89,5 +89,6 @@ export default class Player extends Physics.Arcade.Sprite {
     this.anims.play('turn');
 
     this.scene.gameOver = true;
+    this.scene.gameOverText.setVisible(true);
   }
 }

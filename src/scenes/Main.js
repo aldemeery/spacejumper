@@ -18,6 +18,7 @@ export default class Main extends Scene {
   create() {
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#fff' });
+    this.gameOverText = this.add.text(320, 250, 'Game Over (Press any key)', { fontSize: '48px', fill: '#fff' }).setVisible(false).setDepth(2);
 
     this.bg = this.add.tileSprite(640, 374, 1280, 768, 'sky').setDepth(-1);
 
@@ -50,6 +51,13 @@ export default class Main extends Scene {
     this.physics.add.collider(this.player, this.platforms);
     this.physics.add.collider(this.stars, this.platforms);
     this.physics.add.collider(this.bombs, this.platforms);
+
+    this.input.keyboard.on('keydown', () => {
+      if (this.gameOver) {
+        this.gameOver = false;
+        this.scene.start('Main');
+      }
+    });
   }
 
   update() {
