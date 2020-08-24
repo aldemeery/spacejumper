@@ -13,14 +13,11 @@ export default class Main extends Scene {
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('player', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
-
-    if (!window.localStorage.getItem('name')) {
-      window.localStorage.setItem('name', window.prompt('Please provide a name: '));
-    }
   }
 
   create() {
     this.score = 0;
+    window.localStorage.setItem('score', this.score);
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#fff' });
     this.gameOverText = this.add.text(600, 250, 'Game Over (Press any key)', { fontSize: '48px', fill: '#fff' }).setVisible(false).setDepth(2).setOrigin(0.5);
 
@@ -59,6 +56,7 @@ export default class Main extends Scene {
     this.input.keyboard.on('keydown', () => {
       if (this.gameOver) {
         this.gameOver = false;
+        window.localStorage.setItem('score', this.score);
         this.scene.start('LeaderBoard');
       }
     });
