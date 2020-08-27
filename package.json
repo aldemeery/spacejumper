@@ -9,6 +9,11 @@
     "lint:js": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "jest"
   },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aldemeery/railgunner.git"
@@ -36,8 +41,11 @@
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "fetch-mock": "^9.10.7",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.4.0",
+    "jest-canvas-mock": "^2.2.0",
+    "node-fetch": "^2.6.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
