@@ -10,6 +10,16 @@ RPG game for microverse capstone project.
 
 A dead simple RPG game built using [Phaser](https://phaser.io/) V3
 
+# How to play
+
+- Use the Arrow keys for movement.
+- `Right` to move right, `Left` to move left, and `Up` to jump.
+- Jump between the platforms to collect the stars.
+- Once you have collected all the stars, a new group of them will fall from the sky
+- With every new stars collection there will be one bomb.
+- You lose once you get hit by a bomb.
+- Try to get the highest score you can achieve, to get your name showing up in the leaderboard.
+
 # Local installation
 
 ```bash
@@ -28,13 +38,6 @@ To build the game simply run:
 ```bash
 $ npm run build
 ```
-
-
-# How to play
-
-- Use the Arrow keys for movement.
-- Jump between the platforms to collect the stars.
-- Avoid being hit by bombs.
 
 # Testing
 
